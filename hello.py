@@ -139,10 +139,12 @@ def result():
     print(ansC)
     if ansA > ansB and ansA > ansC:
         return render_template('resultA.html')
-    if ansB > ansA and ansB > ansC:
+    elif ansB > ansA and ansB > ansC:
         return render_template('resultB.html')
-    if ansC > ansB and ansC > ansA:
+    elif ansC > ansB and ansC > ansA:
         return render_template('resultC.html')
+    else
+        return render_template('resultB.html')
 
 
 if __name__ == "__main__":
